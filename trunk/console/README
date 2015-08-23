@@ -1,0 +1,17 @@
+Console 1.0     2007/07/31
+@Author navigation group of SiS
+
+To run system command except "cd" command, please type "$ " before the command
+for example:
+>$ ls /home
+To run command "cd", just type "cd", no need of "$ ", for example:
+>cd ..
+
+How to add new commands to console
+===============================================================================
+Modify console.c as follows:
+1. Implement command function
+2. Add function prototype in "Command prototypes"
+3. Add command name and command implement function point to "cmd_list[]"
+4. Modify function "help" to add your command's information
+5. make
